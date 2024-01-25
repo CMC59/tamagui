@@ -30,10 +30,13 @@
   "dependencies": {
     "@babel/runtime": "^7.18.9",
     "@manypkg/cli": "^0.19.1",
+    "@tamagui/core": "^1.88.12",
+    "@tamagui/form": "^1.88.13",
     "check-dependency-version-consistency": "^3.0.3",
     "eslint": "^8.21.0",
     "node-gyp": "^9.3.1",
     "prettier": "^2.7.1",
+    "tamagui": "^1.88.12",
     "turbo": "^1.10.3",
     "typescript": "^5.3.3"
   },

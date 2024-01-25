@@ -6,6 +6,8 @@ import {
   Separator,
   Sheet,
   useToastController,
+  TextArea,
+  Input,
   XStack,
   YStack,
 } from '@my/ui'
@@ -19,37 +21,20 @@ export function HomeScreen() {
   })
 
   return (
-    <YStack f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" bc="$background">
-        <H1 ta="center">Welcome to Tamagui.</H1>
-        <Paragraph ta="center">
-          Here's a basic starter to show navigating from one screen to another. This screen uses the
-          same code on Next.js and React Native.
-        </Paragraph>
-
-        <Separator />
-        <Paragraph ta="center">
-          Made by{' '}
-          <Anchor color="$color12" href="https://twitter.com/natebirdman" target="_blank">
-            @natebirdman
-          </Anchor>
-          ,{' '}
-          <Anchor
-            color="$color12"
-            href="https://github.com/tamagui/tamagui"
-            target="_blank"
-            rel="noreferrer"
-          >
-            give it a ⭐️
-          </Anchor>
-        </Paragraph>
-      </YStack>
+    <YStack f={1} jc="center" ai="center" >
+        <XStack f={1} jc="center" ai="center" w="100%" bg="#6750a4">
+        <H1 ta="center" col="white">SPACECRAFT</H1>
+        </XStack>
+    <YStack f={1} jc="center" ai="center" >
+        
+        <Input size="$3" mb={20} bw={2} bbc="grey"/>
+         <Input size="$3" mb={100} bw={2} bbc="grey"/>
 
       <XStack>
-        <Button {...linkProps}>Link to user</Button>
+        <Button {...linkProps} size="$4" bg="#6750a4" col="white" w={250}>Login</Button>
       </XStack>
+  </YStack>
 
-      <SheetDemo />
     </YStack>
   )
 }
