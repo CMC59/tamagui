@@ -32,6 +32,7 @@
     "@manypkg/cli": "^0.19.1",
     "@tamagui/core": "^1.88.12",
     "@tamagui/form": "^1.88.13",
+    "@tanstack/react-query": "^5.17.19",
     "check-dependency-version-consistency": "^3.0.3",
     "eslint": "^8.21.0",
     "node-gyp": "^9.3.1",

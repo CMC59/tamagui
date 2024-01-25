@@ -15,27 +15,29 @@ import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import { useState } from 'react'
 import { useLink } from 'solito/link'
 
-export function HomeScreen() {
+export function LoginScreen() {
   const linkProps = useLink({
-    href: '/user/nate',
+    href: '/user/spacecraft',
   })
 
   return (
-    <YStack f={1} jc="center" ai="center" >
+    <>
+      <YStack f={1} jc="center" ai="center" >
         <XStack f={1} jc="center" ai="center" w="100%" bg="#6750a4">
-        <H1 ta="center" col="white">SPACECRAFT</H1>
-        </XStack>
-    <YStack f={1} jc="center" ai="center" >
-        
-        <Input size="$3" mb={20} bw={2} bbc="grey"/>
-         <Input size="$3" mb={100} bw={2} bbc="grey"/>
+          <H1 ta="center" col="white">SPACECRAFT</H1>
+          </XStack>
+          <YStack f={1} jc="center" ai="center" >
+          
+          <Input size="$3" mb={20} bw={2} bbc="grey"/>
+          <Input size="$3" mb={100} bw={2} bbc="grey"/>
 
-      <XStack>
-        <Button {...linkProps} size="$4" bg="#6750a4" col="white" w={250}>Login</Button>
-      </XStack>
-  </YStack>
+          <XStack>
+            <Button {...linkProps} size="$4" bg="#6750a4" col="white" w={250}>Login</Button>
+          </XStack>
+        </YStack>
+      </YStack>
+    </>
 
-    </YStack>
   )
 }
 
