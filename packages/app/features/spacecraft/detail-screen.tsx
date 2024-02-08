@@ -1,4 +1,4 @@
-import { Button, Paragraph, YStack, ScrollView, ListItem } from '@my/ui'
+import { Button, Paragraph, YStack, ScrollView, ListItem, Card } from '@my/ui'
 import React from 'react'
 import { useQuery } from "@tanstack/react-query";
 
@@ -10,31 +10,37 @@ async function fetchData() {
 }
 
 export function StarshipFeedScreen() {
-
-  const {isLoading, isError, data} = useQuery({queryKey:["starships"], queryFn: fetchData});
+  const { isLoading, isError, data } = useQuery({ queryKey: ["starships"], queryFn: fetchData });
 
   React.useEffect(() => {
-    console.log('data',data)
-  },[data])
+    console.log('data', data);
+  }, [data]);
 
-  if (isLoading){
+  if (isLoading) {
     console.log("loading");
-    
-    return <Paragraph>Loading...</Paragraph>
+    return <Paragraph>Loading...</Paragraph>;
   }
-  if (isError){
+  
+  if (isError) {
     console.log("error");
-    
-    return <Paragraph>Error</Paragraph>
+    return <Paragraph>Error</Paragraph>;
   }
 
   return (
-
     <ScrollView>
-  <YStack>
-<Paragraph>test</Paragraph>
-    </YStack>
+      <YStack s={4} padding={4}>
+        {data.map((starship, index) => (
+          <Card key={index} br="md" borderWidth={1} padding={4}>
+            <Paragraph fw="bold" fontSize="lg">Name: {starship.name}</Paragraph>
+            <Paragraph>Model: {starship.model}</Paragraph>
+            <Paragraph>Manufacturer: {starship.manufacturer}</Paragraph>
+            <Paragraph>Hyperdrive Rating: {starship.hyperdrive_rating}</Paragraph>
+            <Paragraph>Cost in Credits: {starship.cost_in_credits}</Paragraph>
+            {/* Render other properties as needed */}
+          </Card>
+        ))}
+      </YStack>
     </ScrollView>
-
-  )
+  );
 }
+
