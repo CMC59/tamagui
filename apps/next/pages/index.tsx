@@ -7,8 +7,8 @@ const queryClient = new QueryClient();
 const App = () => {
   return (
   <QueryClientProvider client={queryClient}>
-    <StarshipFeedScreen/>
-    {/* <LoginScreen/> */}
+    {/* <StarshipFeedScreen/> */}
+    <LoginScreen/>
   </QueryClientProvider>
 
   );

@@ -9,8 +9,8 @@ export default function Screen() {
   return (
     <>
     <QueryClientProvider client={queryClient}>
-    <StarshipFeedScreen/>
-    {/* <LoginScreen/> */}
+    {/* <StarshipFeedScreen/> */}
+    <LoginScreen/>
     </QueryClientProvider>
     </>
   )
