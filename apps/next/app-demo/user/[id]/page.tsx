@@ -1,5 +1,5 @@
 'use client'
 
-import { UserDetailScreen } from 'app/features/spacecraft/detail-screen'
+import { StarshipFeedScreen } from 'app/features/spacecraft/detail-screen'
 
-export default UserDetailScreen
+export default StarshipFeedScreen

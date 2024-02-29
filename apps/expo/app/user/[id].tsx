@@ -1,4 +1,4 @@
-import { UserDetailScreen } from 'app/features/spacecraft/detail-screen'
+import { StarshipFeedScreen } from 'app/features/spacecraft/detail-screen'
 import { Stack } from 'expo-router'
 
 export default function Screen() {
@@ -9,7 +9,7 @@ export default function Screen() {
           title: 'User',
         }}
       />
-      <UserDetailScreen />
+      <StarshipFeedScreen />
     </>
   )
 }
