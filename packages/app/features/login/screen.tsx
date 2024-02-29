@@ -28,8 +28,8 @@ export function LoginScreen() {
           </XStack>
           <YStack f={1} jc="center" ai="center" >
           
-          <Input size="$3" mb={20} bw={2} bbc="grey" w={250}/>
-          <Input size="$3" mb={100} bw={2} bbc="grey" w={250}/>
+          <Input size="$3" mb={20} bw={2} bbc="grey" w={250}  defaultValue="User Name" />
+          <Input size="$3" mb={100} bw={2} bbc="grey" w={250}  defaultValue="Password" />
 
           <XStack>
             <Button {...linkProps} size="$4" bg="#6750a4" col="white" w={250}>Login</Button>
