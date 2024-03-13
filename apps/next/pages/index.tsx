@@ -1,14 +1,8 @@
-import { LoginScreen } from 'app/features/login/screen'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { StarshipFeedScreen } from 'app/features/spacecraft/detail-screen'
-import Head from 'next/head'
+import LoginScreen from 'app/features/login/screen'
 
-const queryClient = new QueryClient();
 const App = () => {
   return (
-  <QueryClientProvider client={queryClient}>
     <LoginScreen/>
-  </QueryClientProvider>
 
   );
 };

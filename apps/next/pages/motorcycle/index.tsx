@@ -1,4 +1,4 @@
-import StarshipFeedScreen  from 'app/features/spacecraft/detail-screen'
+import  MotorcycleScreen  from 'app/features/motorcycle/motorcycle-screen'
 import Head from 'next/head'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 const queryClient = new QueryClient();
@@ -8,10 +8,10 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>User</title>
+        <title>Emoji</title>
       </Head>
       <QueryClientProvider client={queryClient}>
-    <StarshipFeedScreen/>
+    <MotorcycleScreen/>
   </QueryClientProvider>
 
     </>

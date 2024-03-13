@@ -2,6 +2,7 @@ import { Button, Paragraph, YStack, ScrollView, ListItem, Card, Spinner } from '
 import React from 'react'
 import { useQuery } from "@tanstack/react-query";
 import { Airplay, BadgeEuro } from '@tamagui/lucide-icons';
+import { useLink } from 'solito/link'
 
 
 async function fetchData() {
@@ -10,8 +11,11 @@ async function fetchData() {
   return json.results;
 }
 
-export function StarshipFeedScreen() {
+export default function StarshipFeedScreen() {
   const { isLoading, isError, data } = useQuery({ queryKey: ["starships"], queryFn: fetchData });
+  const linkProps = useLink({
+    href: '/motorcycle',
+  })
 
   React.useEffect(() => {
     console.log('data', data);
@@ -48,6 +52,12 @@ export function StarshipFeedScreen() {
           </Card>
         ))}
       </YStack>
+      <YStack>
+      <Button {...linkProps} bc="#111111" color="white" icon={<BadgeEuro size="$1" />}>
+            See some emoji !
+      </Button>
+      </YStack>
+      
     </ScrollView>
   );
 }

@@ -1,4 +1,4 @@
-import StarshipFeedScreen from 'app/features/spacecraft/detail-screen'
+import MotorcycleScreen from 'app/features/motorcycle/motorcycle-screen'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router'
 
@@ -10,11 +10,11 @@ export default function Screen() {
     <>
       <Stack.Screen
         options={{
-          title: 'StarshipScreen',
+          title: 'MotorcycleScreen',
         }}
       />
       <QueryClientProvider client={queryClient}>
-    <StarshipFeedScreen/>
+    <MotorcycleScreen/>
   </QueryClientProvider>
 
     </>
